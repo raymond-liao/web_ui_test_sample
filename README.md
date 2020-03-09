@@ -28,9 +28,9 @@ $ pipenv install
 3. Run test:
 ```shell
 // test special function with report
-$ pytest --capture=no --verbose --html=pytest_selenium_test_report.html test_selenium_webdriver.py::TestURL::test_open_url
+$ pytest --capture=no --verbose --html=./reports/pytest_selenium_test_report.html test_selenium_webdriver.py::TestURL::test_open_url
 // test a file with report
-$ pytest --capture=no --verbose --html=pytest_selenium_test_report.html test_selenium_webdriver.py
+$ pytest --capture=no --verbose --html=./reports/pytest_selenium_test_report.html test_selenium_webdriver.py
 // test all items of the project
 $ pytest
 ```
