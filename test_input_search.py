@@ -7,10 +7,12 @@ import pytest
 from selenium import webdriver
 from time import sleep
 
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support import expected_conditions
+from selenium.webdriver.support.wait import WebDriverWait
 
 
-# Fixture for Firefox
 @pytest.fixture(scope="class")
 def driver_init(request):
     ff_driver = webdriver.Firefox()
@@ -30,12 +32,17 @@ class TestURL(BasicTest):
     def test_open_url(self):
         self.driver.get("https://www.python.org/")
         print(self.driver.title)
-
         assert "Python" in self.driver.title
+
+        # 显式等待
+        # wait = WebDriverWait(self.driver, 10)
+        # elem = wait.until(expected_conditions.element_to_be_clickable((By.NAME, 'q')))
+
+        # 隐式等待
+        self.driver.implicitly_wait(10)
+
         elem = self.driver.find_element_by_name("q")
         elem.clear()
         elem.send_keys("pycon")
         elem.send_keys(Keys.RETURN)
         assert "No results found." not in self.driver.page_source
-
-        sleep(5)
