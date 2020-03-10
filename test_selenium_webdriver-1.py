@@ -11,7 +11,6 @@ from selenium.webdriver.common.keys import Keys
 from time import sleep
 
 
-# Fixture for Firefox
 @pytest.fixture(params=["chrome", "firefox"], scope="class")
 def driver_init(request):
     if request.param == "chrome":

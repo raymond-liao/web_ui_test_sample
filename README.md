@@ -35,4 +35,6 @@ $ pytest --capture=no --verbose --html=./reports/pytest_selenium_test_report.htm
 $ pytest
 ```
 
+## License
 
+`web_ui_test_sample` is avaliable under the MIT license. See the [LICENSE](https://github.com/gaoshanyu/web_ui_test_sample/master/LICENSE) file for more info.
