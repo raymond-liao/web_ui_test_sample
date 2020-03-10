@@ -28,9 +28,10 @@ class BasicTest:
     pass
 
 
+@pytest.mark.smoke
 class TestURL(BasicTest):
     def test_open_url(self):
-        self.driver.get("https://www.baidu.com/")
+        self.driver.get("https://www.patballoon.com/")
         print(self.driver.title)
 
         sleep(5)

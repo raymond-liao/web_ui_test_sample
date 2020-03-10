@@ -24,9 +24,11 @@ def teardown_module(module):
     resource_1_teardown()
 
 
+@pytest.mark.sample
 def test_1_using_resource_1():
     print('Test 1 that uses Resource 1')
 
 
+@pytest.mark.sample
 def test_2_not_using_resource_1():
     print('\nTest 2 does not need Resource 1')

@@ -10,6 +10,7 @@ import pytest
 from factorial_example import factorial_function
 
 
+@pytest.mark.sample
 def test_factorial_functionality():
     print("Inside test_factorial_functionality")
 
@@ -17,6 +18,7 @@ def test_factorial_functionality():
     assert factorial_function(4) == 24
 
 
+@pytest.mark.sample
 def test_standard_library():
     print("Inside test_standard_library")
 
@@ -27,6 +29,7 @@ def test_standard_library():
         assert math.factorial(i) == factorial_function(i)
 
 
+@pytest.mark.sample
 def test_negative_number():
     print("Inside test_negative_number")
 

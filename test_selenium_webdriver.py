@@ -34,6 +34,7 @@ class BasicTest:
     pass
 
 
+@pytest.mark.smoke
 class TestURL(BasicTest):
     def test_open_url(self):
         self.driver.get("https://www.baidu.com/")
@@ -47,6 +48,7 @@ class BasicChromeTest:
     pass
 
 
+@pytest.mark.smoke
 class TestURLChrome(BasicChromeTest):
     def test_open_url(self):
         self.driver.get("https://www.baidu.com/")
